@@ -508,7 +508,7 @@
         }
         
         if (hasCompletedExam(cls, sub, username)) {
-            statusElement.innerHTML = "❌ You have already completed this exam.";
+            statusElement.innerHTML = "❌ You have already completed.";
             statusElement.className = "attempt-status completed";
         } else {
             statusElement.innerHTML = "✅ This assignment is available";
@@ -569,7 +569,7 @@
             .then(response => {
                 if (response.ok) {
                     // File exists → redirect normally
-                    alert(`✅ Access granted! Redirecting to exam...`);
+                    alert(`✅ Access granted! Redirecting to assignment page..`);
                     window.location.href = redirectUrl;
                 } else {
                     // File missing → send user to landing page
